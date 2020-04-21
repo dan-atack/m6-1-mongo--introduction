@@ -95,13 +95,11 @@ const updateGreeting = async (req, res) => {
   const { hello } = req.body;
 
   if (!hello) {
-    res
-      .status(400)
-      .json({
-        status: 400,
-        data: req.body,
-        message: 'Only "hello" may be updated.',
-      });
+    res.status(400).json({
+      status: 400,
+      data: req.body,
+      message: 'Only "hello" may be updated.',
+    });
     return;
   }
 
